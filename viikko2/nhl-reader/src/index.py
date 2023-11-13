@@ -17,6 +17,8 @@ def main():
 
     print("Players from FIN:\n")
 
+    players = sorted(players, key = lambda x: x.points, reverse=True)
+
     for player in players:
         print(player)
 
