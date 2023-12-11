@@ -26,6 +26,16 @@ class Not:
             return False
         return True
 
+class Or:
+    def __init__(self, *conditions):
+        self._conditions = conditions
+
+    def test(self, player):
+        for condition in self._conditions:
+            if condition.test(player):
+                return True
+        return False
+
 class PlaysIn:
     def __init__(self, team):
         self._team = team
